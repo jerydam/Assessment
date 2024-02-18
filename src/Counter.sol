@@ -1,14 +1,18 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+// SimpleCalculator.sol
 
-contract Counter {
-    uint256 public number;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
+contract SimpleCalculator {
+    function add(uint256 a, uint256 b) public pure returns (uint256) {
+        return a + b;
     }
 
-    function increment() public {
-        number++;
+    function subtract(int256 a, int256 b) public pure returns (int256) {
+        return a - b;
+    }
+
+    function multiply(uint256 a, uint256 b) public pure returns (uint256) {
+        return a * b;
     }
 }
