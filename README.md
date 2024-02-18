@@ -1,3 +1,42 @@
+# SimpleCalculator Solidity Contract
+
+This Solidity smart contract provides basic arithmetic operations - addition, subtraction, and multiplication.
+
+## Functions
+
+### `add(uint256 a, uint256 b)`
+
+This function takes two unsigned integers (`a` and `b`) as input parameters and returns their sum.
+
+### `subtract(int256 a, int256 b)`
+
+This function takes two signed integers (`a` and `b`) as input parameters and returns their difference.
+
+### `multiply(uint256 a, uint256 b)`
+
+This function takes two unsigned integers (`a` and `b`) as input parameters and returns their product.
+
+## Usage
+
+1. Deploy the contract on the Ethereum blockchain.
+2. Call the desired function with the appropriate parameters.
+
+## Example
+
+```solidity
+// Deploy the SimpleCalculator contract
+
+SimpleCalculator calculator = new SimpleCalculator();
+
+// Perform addition
+uint256 resultAddition = calculator.add(5, 10);
+
+// Perform subtraction
+int256 resultSubtraction = calculator.subtract(20, 8);
+
+// Perform multiplication
+uint256 resultMultiplication = calculator.multiply(3, 7);
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
