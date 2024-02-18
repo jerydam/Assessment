@@ -1,5 +1,3 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +25,22 @@
     </div>
 
     <p>Result: <span id="result"></span></p>
-
+    <script>
+        // Function to handle MetaMask connection
+        window.connectToMetaMask = async () => {
+            if (window.ethereum) {
+                try {
+                    await ethereum.enable();
+                    alert('Connected to MetaMask!');
+                } catch (error) {
+                    console.error('Error connecting to MetaMask:', error.message);
+                    alert('Error connecting to MetaMask. Check the console for details.');
+                }
+            } else {
+                alert('MetaMask not detected. Please install MetaMask to use this feature.');
+            }
+        };
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
     <script src="app.js"></script>
 
